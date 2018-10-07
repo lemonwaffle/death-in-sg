@@ -3,29 +3,69 @@
 <title>Stacked Area Chart (test)</title>
 
 <link rel='stylesheet' href='style.css' media='screen' />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Playfair+Display:400,400i,700,700i,900,900i|Crimson+Text:400,600,700|Arsenal:400,700" rel="stylesheet">
 
 <body>
-    <div class='chart'>
-
-    </div>
-
     <!-- UL ELEMENTS HERE -->
     <div class='ui'>
+        <select class='ui__cat' >
+        </select>
+
+        <p>Causes of Death % <span>by</span> Age Group (</p>
+
+        <select class='ui__gender'>
+            <option value='None'>All</option>
+            <option value='M'>Males</option>
+            <option value='F'>Females</option>
+        </select>
+
+        <p>)</p>
+
+
+
+        <!-- <div class='ui__view'>
+            <input type='radio' name='view' id='viewGeneral' value='None' checked/>
+            <label for='viewGeneral'><span>General</span></label> -->
+
+            <!-- SPECIFIC CATEGORIES WINDOW -->
+            <!-- <div class='ui__specific-window'>
+                <input type='radio' name='specificView' id='viewSpecific' value='' />
+                <label for='viewSpecific'><span>Specific</span></label>
+
+                <div class='ui__specific'>
+
+                </div>
+            </div>
+        </div>
+
         <div class='ui__gender'>
             <input type='radio' name='gender' id='genderNone' value='None' checked/>
-            <label for='genderNone'>All</label>
+            <label for='genderNone'><span>All</span></label>
             <input type='radio' name='gender' id='genderMale' value='M' />
-            <label for='genderMale'>Male</label>
+            <label for='genderMale'><span>Male</span></label>
             <input type='radio' name='gender' id='genderFemale' value='F' />
-            <label for='genderFemale'>Female</label>
-        </div>
-        <div class='ui__value'>
-            <input type='radio' name='value' id='valueAbsolute' value='False' />
-            <label for='valueAbsolute'>Absolute</label>
-            <input type='radio' name='value' id='valuePercentage' value='True' checked/>
-            <label for='valuePercentage'>Percentage</label>
-        </div>
+            <label for='genderFemale'><span>Female</span></label>
+        </div> -->
     </div>
+
+    <!-- CHART HERE -->
+    <div class='chart'>
+
+
+
+        <div class='chart__tooltip'>
+            <p class='tooltip__header'></p>
+            <!-- <p class='tooltip__value'></p> -->
+        </div>
+
+    </div>
+
+
+    <!-- ESSAY HERE -->
+    <div class='essay'>
+
+    </div>
+
 
     <!-- THIRD-PARTY JAVASCRIPT LIBRARIES -->
     <script src="https://d3js.org/d3.v4.min.js"></script>

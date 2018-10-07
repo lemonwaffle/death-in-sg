@@ -1,9 +1,307 @@
 body {
     margin: 0;
+    font-family: 'Open Sans', 'sans-serif';
+    color: #d9e2cf;
+    color: #d9e2cf;
+    background-color: #101318;
 }
 
 .chart {
     max-width: 1200px;
     height: 700px;
     margin: 0 auto;
+
+    position: relative;
+}
+
+/* AXES STYLING ***********************************************************************/
+.chart__axis {
+    font-size: 11px;
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: 600;
+}
+
+/* the line */
+.chart__axis path {
+    stroke: none;
+}
+
+.chart__axis text {
+    fill: #d9e2cf;
+}
+
+/* Y-AXIS */
+/* tick marks */
+.chart__axis--y .tick line {
+    stroke: #d9e2cf;
+    stroke-dasharray: 5,5;
+}
+
+.chart__axis--y .tick:first-of-type line {
+    stroke: none;
+    /* stroke-dasharray: none; */
+}
+
+.chart__axis--y .tick:first-of-type text {
+    /* fill: none; */
+}
+
+/* X-AXIS */
+/* tick marks */
+.chart__axis--x line {
+    stroke: none;
+}
+
+/* UI STYLING ***********************************************************************/
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+
+/* .ui div {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 20px;
+    height: auto;
+}
+
+.ui__gender {
+    border-left: 1px solid #d9e2cf;
+}
+
+.ui div label {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.ui label span {
+    padding: 3px 10px;
+    color: #757575;
+    border-radius: 1px;
+    display: inline-block;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.ui__view {
+    margin-right: 28px;
+} */
+
+
+/* HOVER EFFECTS */
+
+.ui label span:hover {
+    color: #d9e2cf;
+}
+
+/* CHECKED EFFECTS */
+.ui input:checked + label span {
+    color: #212121;
+    background-color: #d9e2cf;
+    /* font-weight: 700; */
+}
+
+
+/* SPECIFIC CATEGORIES WINDOW **************************/
+div.ui__specific-window {
+    position: relative;
+    padding: 0;
+    /* pointer: cursor; */
+}
+
+div.ui__specific {
+    height: auto;
+    width: auto;
+
+    padding: 10px 15px;
+    padding-top: 20px;
+    margin: 0;
+
+    border: 1px solid #d9e2cf;
+    border-top: 0px;
+
+
+    background-color: #101318;
+
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    /* z-index: 1; */
+
+    -webkit-transition: visibility 0.2s, opacity 0.2s ease-in-out;
+    -moz-transition: visibility 0.2s, opacity 0.2s ease-in-out;
+    -o-transition: visibility 0.2s, opacity 0.2s ease-in-out;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.ui__specific div {
+    margin: 5px 0;
+    padding: 0;
+    display: block;
+}
+
+.ui__specific div label {
+    margin: 0;
+}
+
+
+.ui__specific-window:hover div.ui__specific {
+    opacity: 1.0;
+    visibility: visible;
+    /* height: auto; */
+}
+
+/* .ui__specific-window span {
+    padding: 3px 10px;
+    color: #757575;
+    border-radius: 2px;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.ui__specific-window span.ui--checked */
+
+
+
+/* TOOLTIPS ******************************************************************************* */
+.chart__tooltip {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    height: auto;
+    width: auto;
+
+    background-color: rgba(16,19,24,0.8);
+    /* background-color: white; */
+    border: 1px solid #d9e2cf;
+    border-radius: 2px;
+
+    padding: 10px 10px;
+}
+
+.chart__tooltip p {
+    font-family: 'Arsenal', 'serif';
+    display: inline-block;
+
+    margin: 0;
+}
+
+.chart__tooltip div {
+    margin-bottom: 3px;
+}
+
+.tooltip__header {
+    font-weight: 700;
+    color: #9E9E9E;
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.tooltip__cat {
+    width: 120px;
+}
+
+.tooltip__value {
+    text-align: right;
+    width: 40px;
+    font-weight: 700;
+    color: white;
+    /* background-color: white; */
+}
+
+
+/* ESSAY STYLING */
+.essay {
+    width: 100%;
+    height: 1000px;
+
+    background-color: #d9e2cf;
+
+    margin-top: 200px;
+}
+
+
+/* NEW UI STYLING *******************************************************************/
+
+.ui {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+
+    margin-top: 100px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    font-family: 'Arsenal', 'serif';
+    /* font-family: 'Arsenal', 'sans-serif'; */
+    /* font-weight: 700; */
+    font-size: 28px;
+
+    background-color: #101318;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+select {
+    padding: 1px 5px;
+    border: none;
+    background-color: #212121;
+    box-shadow: none;
+    background-image: none;
+    /* -webkit-appearance: none; */
+
+    color: #d9e2cf;
+    font-family: 'Arsenal', 'sans-serif';
+    font-size: 28px;
+
+    cursor: pointer;
+
+    /* text-align: center; */
+    /* display: inline; */
+}
+
+select:focus {
+    outline: none;
+}
+
+option {
+    background-color: #212121;
+    cursor: pointer;
+    /* align-items: center; */
+    font-size: 18px;
+}
+
+
+.ui p {
+    margin: 0;
+    display: inline-block;
+}
+
+.ui p span {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    color: #616161;
 }
