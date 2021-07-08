@@ -1,7 +1,7 @@
 # death-in-sg
 
 A visualization of the ebb and flows of different causes of death in Singapore. WIP.  
-Can be viewed at https://lemonwaffle.github.io/death-in-sg/.
+Can be viewed at https://yizhe-ang.github.io/death-in-sg/.
 
 ## The Data
 The dataset was kindly prepared and obtained from [Data.gov.sg](https://data.gov.sg/dataset/death-by-cause-and-age-group?view_id=5b598623-23fc-4e18-aa2f-54e117f22d4a&resource_id=04787aed-3c46-4854-839f-6c0755a2ffdc), a repository for publicly-available datasets from Singapore's various public agencies, made available under the terms of the [Singapore Open Data Licence version 1.0](https://data.gov.sg/open-data-licence).
